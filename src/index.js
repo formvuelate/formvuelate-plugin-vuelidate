@@ -1,5 +1,5 @@
 import { toRefs, isRef, reactive, watch, h } from 'vue'
-import useVuelidate from '@/libs/vuelidate'
+import useVuelidate from 'vuelidate'
 
 export default function VuelidatePlugin (baseReturns, props) {
   // Take the parsed schema from SchemaForm setup returns
