@@ -1,0 +1,62 @@
+{
+  "name": "@formvuelatte/plugin-vuelidate",
+  "version": "1.0.1",
+  "description": "FormVueLatte Vuelidate plugin",
+  "main": "dist/formvuelatte-plugin-vuelidate.cjs.js",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vuelidate/formvuelatte-plugin-vuelidate.git"
+  },
+  "author": {
+    "name": "Damian Dulisz",
+    "email": "damian.dulisz@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Damian Dulisz",
+      "email": "damian.dulisz@gmail.com"
+    },
+    {
+      "name": "Marina Mosti",
+      "email": "marina@mosti.com.mx"
+    }
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "rollit",
+    "test": "yarn test:unit",
+    "test:unit": "jest --coverage",
+    "test:unit:watch": "yarn test:unit --watch"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.0",
+    "@vue/test-utils": "^2.0.0-alpha.6",
+    "babel-jest": "^25.2.6",
+    "jest": "^26.0.1",
+    "rollit": "^0.0.9",
+    "vue": "^3.0.0-beta.12",
+    "vue-jest": "^5.0.0-alpha.0",
+    "vuelidate": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-beta.12",
+    "formvuelatte": "^2.0.0-alpha.1",
+    "vue": "^3.0.0-beta.12",
+    "vuelidate": "^1.0.0"
+  },
+  "files": [
+    "src/*",
+    "dist/*"
+  ],
+  "bugs": {
+    "url": "https://github.com/vuelidate/formvuelatte-plugin-vuelidate/issues"
+  },
+  "homepage": "https://github.com/vuelidate/formvuelatte-plugin-vuelidate#readme",
+  "module": "dist/formvuelatte-plugin-vuelidate.es.js",
+  "unpkg": "dist/formvuelatte-plugin-vuelidate.js",
+  "browser": "dist/formvuelatte-plugin-vuelidate.es.js"
+}
