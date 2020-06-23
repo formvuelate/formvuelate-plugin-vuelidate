@@ -1,4 +1,4 @@
-import { toRefs, h } from 'vue'
+import { toRefs, h, computed, markRaw } from 'vue'
 import useVuelidate from 'vuelidate'
 
 export default function VuelidatePlugin (baseReturns) {
@@ -6,12 +6,12 @@ export default function VuelidatePlugin (baseReturns) {
   const { parsedSchema } = baseReturns
 
   // Wrap all components with the "withVuelidate" component
-  const schemaWithVuelidate = parsedSchema.map(el => {
+  const schemaWithVuelidate = computed(() => parsedSchema.value.map(el => {
     return {
       ...el,
-      component: withVuelidate(el.component)
+      component: markRaw(withVuelidate(el.component))
     }
-  })
+  }))
 
   return {
     ...baseReturns,
