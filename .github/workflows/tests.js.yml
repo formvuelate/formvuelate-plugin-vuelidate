@@ -23,5 +23,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 13
+    - name: Yarn
+      run: yarn
+    - name: Lint
+      run: yarn lint
     - name: Run tests
-      run: yarn && yarn test:unit
+      run: yarn test:unit
+    - name: Codecov
+      uses: codecov/codecov-action@v1.0.7
