@@ -1,15 +1,15 @@
 {
-  "name": "@formvuelatte/plugin-vuelidate",
+  "name": "@formvuelate/plugin-vuelidate",
   "version": "1.0.0-alpha.1",
-  "description": "FormVueLatte Vuelidate plugin",
-  "main": "dist/formvuelatte-plugin-vuelidate.cjs.js",
+  "description": "FormVueLate Vuelidate plugin",
+  "main": "dist/formvuelate-plugin-vuelidate.cjs.js",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/vuelidate/formvuelatte-plugin-vuelidate.git"
+    "url": "git+ssh://git@github.com/formvuelate/formvuelate-plugin-vuelidate.git"
   },
   "author": {
     "name": "Damian Dulisz",
@@ -52,7 +52,7 @@
   },
   "peerDependencies": {
     "@vue/compiler-sfc": "^3.0.0-beta.12",
-    "formvuelatte": "^2.0.0-alpha.1",
+    "formvuelate": "^2.0.0-alpha.3",
     "vue": "^3.0.0-beta.12",
     "vuelidate": "^1.0.0"
   },
@@ -61,10 +61,10 @@
     "dist/*"
   ],
   "bugs": {
-    "url": "https://github.com/vuelidate/formvuelatte-plugin-vuelidate/issues"
+    "url": "https://github.com/formvuelate/formvuelate-plugin-vuelidate/issues"
   },
-  "homepage": "https://github.com/vuelidate/formvuelatte-plugin-vuelidate#readme",
-  "module": "dist/formvuelatte-plugin-vuelidate.es.js",
-  "unpkg": "dist/formvuelatte-plugin-vuelidate.js",
-  "browser": "dist/formvuelatte-plugin-vuelidate.es.js"
+  "homepage": "https://github.com/formvuelate/formvuelate-plugin-vuelidate#readme",
+  "module": "dist/formvuelate-plugin-vuelidate.es.js",
+  "unpkg": "dist/formvuelate-plugin-vuelidate.js",
+  "browser": "dist/formvuelate-plugin-vuelidate.es.js"
 }
