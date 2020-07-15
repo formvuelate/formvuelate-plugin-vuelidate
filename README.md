@@ -4,4 +4,4 @@
 
 Vuelidate plugin for FormVueLate
 
-For documentation check out [FormVueLatte's docs](https://formvuelate.js.org)
+For documentation check out [FormVueLate's docs](https://formvuelate.js.org)
