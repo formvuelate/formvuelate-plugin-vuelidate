@@ -28,8 +28,7 @@ export function withVuelidate (Comp) {
       // Setup validation results for that schema leaf
       const vResults = useVuelidate(
         { [propertyName]: validations.value },
-        { [propertyName]: modelValue },
-        propertyName
+        { [propertyName]: modelValue }
       )
 
       return {
