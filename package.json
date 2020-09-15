@@ -40,9 +40,10 @@
     "babel-jest": "^25.2.6",
     "jest": "^26.0.1",
     "rollit": "^0.0.9",
-    "vue": "^3.0.0-beta.12",
+    "vue": "^3.0.0-rc.10",
     "vue-jest": "^5.0.0-alpha.0",
-    "vuelidate": "^1.0.0",
+    "@vuelidate/core": "^2.0.0-alpha.2",
+    "@vuelidate/validators": "^2.0.0-alpha.2",
     "eslint": "^7.3.1",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
@@ -51,10 +52,10 @@
     "eslint-plugin-standard": "^4.0.1"
   },
   "peerDependencies": {
-    "@vue/compiler-sfc": "^3.0.0-beta.12",
-    "formvuelate": "^2.0.0-alpha.3",
-    "vue": "^3.0.0-beta.12",
-    "vuelidate": "^1.0.0"
+    "@vue/compiler-sfc": "^3.0.0-rc.10",
+    "formvuelate": "^2.0.0-beta.2",
+    "vue": "^3.0.0-rc.10",
+    "@vuelidate/core": "^2.0.0-alpha.2"
   },
   "files": [
     "src/*",
