@@ -1,21 +1,31 @@
 import { toRefs, h, computed, markRaw } from 'vue'
-import useVuelidate from 'vuelidate'
+import useVuelidate from '@vuelidate/core'
+
+/**
+ * For a Schema, find the elements in each of the rows and remap the element with the given function
+ * @param {Array} schema
+ * @param {Function} fn
+ *
+ * @returns {Array}
+ */
+export const mapElementsInSchema = (schema, fn) => schema.map(row => row.map(el => fn(el)))
 
 export default function VuelidatePlugin (baseReturns) {
   // Take the parsed schema from SchemaForm setup returns
   const { parsedSchema } = baseReturns
 
   // Wrap all components with the "withVuelidate" component
-  const schemaWithVuelidate = computed(() => parsedSchema.value.map(el => {
+  const schemaWithVuelidate = mapElementsInSchema(parsedSchema.value, el => {
+    console.log('mapping', el)
     return {
       ...el,
       component: markRaw(withVuelidate(el.component))
     }
-  }))
+  })
 
   return {
     ...baseReturns,
-    parsedSchema: schemaWithVuelidate
+    parsedSchema: computed(() => schemaWithVuelidate)
   }
 }
 
@@ -23,11 +33,15 @@ export function withVuelidate (Comp) {
   return {
     setup (props, { attrs }) {
       const { validations, modelValue, model } = toRefs(props)
-      const propertyName = model.value
+
+      const propertyName = model ? model.value : attrs.model
+      const validationsObj = validations
+        ? validations.value
+        : attrs.validations ? attrs.validations : {}
 
       // Setup validation results for that schema leaf
       const vResults = useVuelidate(
-        { [propertyName]: validations.value },
+        { [propertyName]: validationsObj },
         { [propertyName]: modelValue }
       )
 
