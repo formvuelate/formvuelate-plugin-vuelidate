@@ -35,9 +35,7 @@ export function withVuelidate (Comp) {
       const { validations, modelValue, model } = toRefs(props)
 
       const propertyName = model ? model.value : attrs.model
-      const validationsObj = validations
-        ? validations.value
-        : attrs.validations ? attrs.validations : {}
+      const validationsObj = validations || (attrs.validations ? attrs.validations : {})
 
       // Setup validation results for that schema leaf
       const vResults = useVuelidate(
