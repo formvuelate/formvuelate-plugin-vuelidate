@@ -16,7 +16,6 @@ export default function VuelidatePlugin (baseReturns) {
 
   // Wrap all components with the "withVuelidate" component
   const schemaWithVuelidate = mapElementsInSchema(parsedSchema.value, el => {
-    console.log('mapping', el)
     return {
       ...el,
       component: markRaw(withVuelidate(el.component))

@@ -1264,15 +1264,15 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.0.0-rc.10.tgz#e7ab62abcabbfc738545902b96a3aa78f59f3286"
   integrity sha512-fI6gVhhgb3cAmEkY4oeVVA2hWZ2xvkgogHdBI5PL7gSvZnOB6XZ2eQGsYjC4W+7BegvEkoMBuZsFXVa4ZQ07XQ==
 
-"@vue/test-utils@^2.0.0-alpha.6":
-  version "2.0.0-alpha.6"
-  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.0.0-alpha.6.tgz#094ef8bf1234e60628c684d1e24b13ff74131580"
-  integrity sha512-7GaFJve/ljFBzZxhJstg53TlWIZ1hDVHHQnoSbcI32YYkmzZv1rFyMta6hQIAiH+Sel7P9XVfIvb8DTY5u9wEw==
+"@vue/test-utils@^2.0.0-beta.6":
+  version "2.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.0.0-beta.6.tgz#2f7a653b0025cd4236968269c5972e807fa1fb2c"
+  integrity sha512-nBj5HHoTD+2xg0OQ93p/Hil5SkFUcNJ5BA2RUnHlOH6a4PVskgMK8dOLyVcZ1ZJif7knjt7yQVJ6K6YwIzeR1A==
 
-"@vuelidate/core@^2.0.0-alpha.2":
-  version "2.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/@vuelidate/core/-/core-2.0.0-alpha.2.tgz#260e1e57b1e65b4e755bcbb3459b42d5a7e7df47"
-  integrity sha512-RAXivgKjdiyPLPbZo312NL7sfjLWzwvNU1/2Yn/Scd76MmOrKfISj9Nb2R+g2phMyOOO2F5yaoO54vKytTdHCA==
+"@vuelidate/core@^2.0.0-alpha.4":
+  version "2.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@vuelidate/core/-/core-2.0.0-alpha.4.tgz#ee456a6c66c0a028cd73ff6141db747a2c76feb5"
+  integrity sha512-Jr1PjvrPPC/LZ0QuMgogZ9XbR9so0cxnfIuhZcr4vK8dQ/3B/DeLx1J1w+u5iyIFpB5X3ueYTg5ZLVJLd4BbDw==
   dependencies:
     vue-demi latest
 
