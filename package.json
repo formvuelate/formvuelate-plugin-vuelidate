@@ -1,6 +1,6 @@
 {
   "name": "@formvuelate/plugin-vuelidate",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "FormVueLate Vuelidate plugin",
   "main": "dist/formvuelate-plugin-vuelidate.cjs.js",
   "private": false,
@@ -31,7 +31,9 @@
     "test": "yarn test:unit",
     "test:unit": "jest --coverage",
     "test:unit:watch": "yarn test:unit --watch",
-    "lint": "eslint --fix src/**/*"
+    "lint": "eslint --fix src/**/*",
+    "build:publish": "bash ./scripts/build.sh",
+    "postversion": "PACKAGE_VERSION=$npm_package_version bash ./scripts/postversion.sh"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
