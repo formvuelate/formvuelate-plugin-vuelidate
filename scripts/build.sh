@@ -1,4 +1,4 @@
 yarn test
 yarn lint
 yarn build
-yarn version
+yarn version --no-git-tag-version
