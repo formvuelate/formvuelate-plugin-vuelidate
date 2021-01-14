@@ -69,29 +69,17 @@ describe('Vuelidate plugin', () => {
     const { parsedSchema } = VuelidatePlugin({ parsedSchema: computedSchema })
 
     expect(parsedSchema.value).toEqual([[
-      {
-        component: expect.objectContaining({
-          setup: expect.any(Function)
-        }),
-        model: 'first',
-        validations: {
-          required: expect.any(Function)
-        }
-      }
+      expect.objectContaining({
+        model: 'first'
+      })
     ]])
 
     toggle.value = 'B'
 
     expect(parsedSchema.value).toEqual([[
-      {
-        component: expect.objectContaining({
-          setup: expect.any(Function)
-        }),
-        model: 'second',
-        validations: {
-          email: expect.any(Function)
-        }
-      }
+      expect.objectContaining({
+        model: 'second'
+      })
     ]])
   })
 })
