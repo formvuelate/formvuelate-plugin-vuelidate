@@ -14,17 +14,16 @@ export default function VuelidatePlugin (baseReturns) {
   // Take the parsed schema from SchemaForm setup returns
   const { parsedSchema } = baseReturns
 
-  // Wrap all components with the "withVuelidate" component
-  const schemaWithVuelidate = mapElementsInSchema(parsedSchema.value, el => {
+  const schemaWithVuelidate = computed(() => mapElementsInSchema(parsedSchema.value, el => {
     return {
       ...el,
       component: markRaw(withVuelidate(el.component))
     }
-  })
+  }))
 
   return {
     ...baseReturns,
-    parsedSchema: computed(() => schemaWithVuelidate)
+    parsedSchema: schemaWithVuelidate
   }
 }
 
