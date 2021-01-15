@@ -1,6 +1,6 @@
 /**
- * @formvuelate/plugin-vuelidate v1.0.0-alpha.1
- * (c) 2020 Damian Dulisz <damian.dulisz@gmail.com>, Marina Mosti <marina@mosti.com.mx>
+ * @formvuelate/plugin-vuelidate v1.0.0-alpha.3
+ * (c) 2021 Damian Dulisz <damian.dulisz@gmail.com>, Marina Mosti <marina@mosti.com.mx>
  * @license MIT
  */
 
@@ -4299,13 +4299,13 @@ function VuelidatePlugin (baseReturns) {
   var parsedSchema = baseReturns.parsedSchema;
 
   // Wrap all components with the "withVuelidate" component
-  var schemaWithVuelidate = mapElementsInSchema(parsedSchema.value, function (el) {
+  var schemaWithVuelidate = computed$$1(function () { return mapElementsInSchema(parsedSchema.value, function (el) {
     return Object.assign({}, el,
       {component: markRaw(withVuelidate(el.component))})
-  });
+  }); });
 
   return Object.assign({}, baseReturns,
-    {parsedSchema: computed$$1(function () { return schemaWithVuelidate; })})
+    {parsedSchema: schemaWithVuelidate})
 }
 
 function withVuelidate (Comp) {

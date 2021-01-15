@@ -1,6 +1,6 @@
 {
   "name": "@formvuelate/plugin-vuelidate",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "FormVueLate Vuelidate plugin",
   "main": "dist/formvuelate-plugin-vuelidate.cjs.js",
   "private": false,
