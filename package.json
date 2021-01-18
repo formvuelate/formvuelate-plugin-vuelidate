@@ -1,6 +1,6 @@
 {
   "name": "@formvuelate/plugin-vuelidate",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "FormVueLate Vuelidate plugin",
   "main": "dist/formvuelate-plugin-vuelidate.cjs.js",
   "private": false,
@@ -27,7 +27,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "rollit",
+    "build": "rollit --external vue --external @vuelidate/core",
     "test": "yarn test:unit",
     "test:unit": "jest --coverage",
     "test:unit:watch": "yarn test:unit --watch",
@@ -50,14 +50,13 @@
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^26.0.1",
     "rollit": "^0.0.9",
-    "vue": "^3.0.0-rc.10",
+    "vue": "^3.0.0",
     "vue-jest": "^5.0.0-alpha.0"
   },
   "peerDependencies": {
-    "@vue/compiler-sfc": "^3.0.0-rc.10",
     "@vuelidate/core": "^2.0.0-alpha.4",
-    "formvuelate": "^2.0.0-beta.3",
-    "vue": "^3.0.0-rc.10"
+    "formvuelate": "^2.0.0",
+    "vue": "^3.0.0"
   },
   "files": [
     "src/*",
